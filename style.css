@@ -7,15 +7,21 @@ body{
     overflow-x: hidden;
 }
 /* ...............................creation de la premiere navbar ................... */
+nav{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+} 
 .first-nav {
   display: flex;
-   justify-content: center; 
+   justify-content: space-around; 
 
   align-items: center;
-  gap:14rem ;
+
   background-color: black;
   width: 100%;
-  height: 9vh;
+padding: 20px;
   color: #ffffff80;
   font-size: 10px;
 }
@@ -38,7 +44,9 @@ body{
   align-items: center;
   width: 100%;
   height: 11vh;
+  background-color: #fff;
 }
+
 .nav ul {
   display: flex;
   gap: 30px;
@@ -56,16 +64,17 @@ body{
     position: relative;
     top: -2rem;
     left: -4rem;
+    right: 2rem;
 }
 /* ..........................................creation de limage central.................................... */
 .container-fond{
     background: url(image/image\ de\ fond.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     width: 100%;
     height:130vh ;
-    
+    margin-top: 8rem;
 
 }
 .image-de-fond{
@@ -75,40 +84,36 @@ body{
 .immmg2{
     width: 7rem;
     position: relative;
-    bottom: -7rem;
+   top: 4rem;
 }
 .lettre-de-fond{
-    position: relative;
-    bottom: -15rem;
-    right: -25rem;
+   text-align: center;
 }
 .lettre-de-fond h1{
-    position: relative;
-    right: 7rem;
+margin-top: 5rem;
+   
     color: #fff;
     font-size: 5rem;
     font-weight: 800;
 }
-.lettre-de-fond{
+.lettre-de-fond h2{
     color: #ffffff80;
+    margin-top: 1rem;
 }
 .lettre-de-fond button{
     background-color: transparent; 
-    position: relative;
-    bottom: -7rem;
-    right: -13rem;
+margin-top: 4rem;
     padding: 1.5rem;
     color: #fff;
     border-color: #fff;
     
 }
-.point-container{
-    
+.point-container{ 
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    position: relative;
-    bottom: -14rem;
-    right: -13rem;
+   margin-top: 7rem;
 }
 .point{
     background-color: #ffffff80;
@@ -130,19 +135,19 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   position: relative;
   top: -5rem;
 }
 .nixon{
   background-color: #ff6600;
   width: 30%;
-  height: 20rem;
+  height: 320px;
   position: relative;
   left: -6rem;
 }
 .bord{
   border: 4px solid #fff;
-  width:95%;
   height: 200px;
   /* bottom: 2.9rem; */
   top: -20.5rem;
@@ -156,8 +161,8 @@ body{
   width: 30%;
   height: 100px;
   position: absolute;
-  top: -O.5rem;
-  left: -2rem;
+  /* top: -O.5rem;
+  left: -2rem; */
 }
 .border h2{
   color: #fff;
@@ -175,28 +180,17 @@ body{
   color: #fff;
 }
 /* ..........................................deuxiemme partie........................ */
-.section-photo{
-  background-color: gainsboro;
-  width: 100%;
-  height: 500px;
-}
-.col{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: -5rem;
-}
+
 .air{
   background-color: #9b9b9b;
   width: 30%;
-  height: 20rem;
+  height: 320px;
   position: relative;
-  right: 1rem;
+  /* right: 1rem; */
 }
 .black{
   border: 4px solid #fff;
-  width:95%;
+  /* width:95%; */
   height: 200px;
   /* bottom: 2.9rem; */
   top: -20.5rem;
@@ -209,9 +203,9 @@ body{
   background-color: #9b9b9b;
   width: 30%;
   height: 100px;
-  position: absolute;
+  /* position: absolute;
   top: -O.5rem;
-  left: -2rem;
+  left: -2rem; */
 }
 .white h2{
   color: #fff;
@@ -232,158 +226,74 @@ body{
 
 
 /* Media queries pour les tablettes (768px à 1024px) */
-@media screen and (max-width: 1024px) {
-  .first-nav {
-    gap: 5rem;
-    font-size: 12px;
-  }
-
-  .section-nav ul {
-    gap: 20px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .immmg1 {
-    left: 0;
-    top: -1rem;
-  }
-
-  .container-fond {
-    height: 100vh;
-  }
-
-  .lettre-de-fond h1 {
-    font-size: 3rem;
-    right: 0;
-  }
-
-  .lettre-de-fond button {
-    right: 0;
-    padding: 1rem;
-  }
-
-  .section-photo {
-    height: auto;
-  }
-
-  .col {
-    flex-direction: column;
-  }
-
-  .nixon, .air {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .bord, .black {
-    width: 90%;
-  }
-}
 
 /* Media queries pour les téléphones (moins de 768px) */
 @media screen and (max-width: 768px) {
+  body {
+    border: 1px solid;
+  }
   .first-nav {
-    flex-direction: column;
+    width: 100%;
+    border: 1px solid red;
     gap: 1rem;
-    height: auto;
     padding: 1rem;
   }
-
+  .immmg1{
+    position: relative;
+    top: -2.9rem;
+    left: -6rem;
+    width: 30%;
+}
+.lettre-nav {
+  display: none;
+}
+.section-nav ul li a {
+  font-size: 11px;
+}
   .navbar {
-    flex-direction: column;
-    height: auto;
-  }
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
 
-  .section-nav ul, .nav ul {
-    flex-direction: column;
-    gap: 10px;
   }
+.nav ul li a {
+  font-size: 12px
+}
+ .icon-nav{
+  display: none;
+ }
 
   .container-fond {
-    height: 90vh;
-    background-size: contain;
+ margin-top: 9rem;
   }
-
-  .lettre-de-fond h1 {
-    font-size: 2rem;
-    right: 0;
-  }
-
-  .lettre-de-fond button {
-    padding: 0.8rem;
-  }
-
-  .point-container {
-    right: 0;
-    bottom: -10rem;
-  }
-
-  .section-photo {
-    height: auto;
-    padding: 1rem;
-  }
-
-  .nixon, .air {
-    width: 100%;
-  }
-
-  .bord, .black {
-    width: 100%;
-  }
-}
-/* Section photo et border - par défaut */
-/* Media queries pour les tablettes (768px à 1024px) */
-@media screen and (max-width: 1024px) {
-  .section-photo {
-    height: auto; /* Ajuste la hauteur de la section pour s'adapter */
-  }
-
-  .nixon, .air {
-    width: 50%; /* Agrandit les images pour qu'elles remplissent mieux l'espace */
-    height: 15rem;
-  }
-
-  .bord, .black {
-    width: 90%;
-    height: 150px; /* Réduit la hauteur de la bordure */
-  }
-}
-
-/* Media queries pour les smartphones (moins de 768px) */
-@media screen and (max-width: 768px) {
-  .section-photo {
-    height: auto;
-    padding: 1rem; /* Ajoute du padding pour espacer le contenu */
-  }
-
-  .col {
-    flex-direction: column; /* Passe les éléments en disposition colonne */
+  .col{
+    display: flex;
+  
     align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: -5rem;
+    left: -2rem;
+  }
+  .nixon{
+    background-color: #ff6600;
+    width: 30%;
+    height: 20rem;
+    position: relative;
+    left: -9rem;
+  }
+  .air{
+    background-color: #9b9b9b;
+    width: 30%;
+    height: 20rem;
+    position: relative;
+    left: -9rem;
   }
 
-  .nixon, .air {
-    width: 100%; /* Les images prennent toute la largeur */
-    height: 12rem; /* Réduit encore la hauteur des images */
-  }
-
-  .bord, .black {
-    width: 100%; /* Les bordures prennent toute la largeur */
-    height: 130px; /* Réduit la hauteur des bordures */
-  }
-
-  .border h2, .white h2 {
-    font-size: 20px; /* Réduit la taille des titres dans les bordures */
-  }
-
-  .watch, .shoes {
-    font-size: 8px; /* Ajuste la taille du texte pour les petits écrans */
-    top: 10rem; /* Ajuste la position du texte */
-  }
 }
+
 
 
     
